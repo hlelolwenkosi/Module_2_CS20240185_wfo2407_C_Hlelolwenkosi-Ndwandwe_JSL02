@@ -38,7 +38,7 @@ const addNewGoal = () => {
 
     // Code structure
     if (goalInput !== '') {
-        const newGoal = document.createElement('li'); // Make a new list 
+        const newGoal = document.createElement('li'); // Make a new list item 
         newGoal.textContent = goalInput; // Set goal input
         document.querySelector('#goalList').appendChild(newGoal); // Add the new goal to the list
     } else {
