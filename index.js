@@ -36,8 +36,15 @@ const addNewGoal = () => {
         return; // Exit the function to prevent adding the duplicate
     }
 
-    // ⚠️ Hint 3: Code structure
-    // You might want to wrap the duplicate-checking logic in an 'if' statement.
+    // Code structure
+    if (goalInput !== '') {
+        const newGoal = document.createElement('li'); // Make a new list 
+        newGoal.textContent = goalInput; // Set goal input
+        document.querySelector('#goalList').appendChild(newGoal); // Add the new goal to the list
+    } else {
+        alert('Please enter a valid goal.'); // Alert if empty
+    }
+};
     
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
