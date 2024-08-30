@@ -23,8 +23,14 @@ const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value.trim(); // Trim input to remove extra spaces
     const goalList = document.querySelector('#goalList li');// Get all existing goals in listed items
     
-    // ⚠️ Hint 1: Check for duplicates
-    // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
+    //Check for duplicates
+    goalList.forEach(goal => {
+        if (goal.textContent === goalInput) {
+            isDuplicate = true; // Set flag if duplicate is found
+        }
+    });
+
+    
     
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
