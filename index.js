@@ -21,7 +21,7 @@ document.querySelector('#submitWorkout').addEventListener('click', displayWorkou
 
 const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value.trim(); // Trim input to remove extra spaces
-    const goalList = document.querySelector('#goalList');
+    const goalList = document.querySelector('#goalList li');// Get all existing goals in listed items
     
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
