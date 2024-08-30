@@ -29,13 +29,13 @@ const addNewGoal = () => {
             isDuplicate = true; // Set flag if duplicate is found
         }
     });
+ 
+    // Prevent duplicates
+    if (isDuplicate) {
+        alert('This goal already exists! Please add a different goal.');
+        return; // Exit the function to prevent adding the duplicate
+    }
 
-    
-    
-    // ⚠️ Hint 2: Prevent duplicates
-    // If a duplicate is found, display an alert to the user and don't add the goal to the list.
-    // If it's not a duplicate, proceed with adding it as a new goal.
-    
     // ⚠️ Hint 3: Code structure
     // You might want to wrap the duplicate-checking logic in an 'if' statement.
     
