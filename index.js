@@ -21,14 +21,14 @@ document.querySelector('#submitWorkout').addEventListener('click', displayWorkou
 
 // Function to add new fitness goals and prevent duplicates
 const addNewGoal = () => {
-    const goalInput = document.querySelector('#goalInput').value.trim(); // Trim input
+    let goalInput = document.querySelector('#goalInput').value.trim().toLowerCase(); // Trim and convert input to lowercase
     const goalListItems = document.querySelectorAll('#goalList li'); // Get all existing goals
 
     let isDuplicate = false;
 
     // Check if the goal already exists in the list
     goalListItems.forEach(goal => {
-        if (goal.textContent === goalInput) {
+        if (goal.textContent.toLowerCase() === goalInput) { // Compare in lowercase
             isDuplicate = true;
         }
     });
@@ -48,6 +48,7 @@ const addNewGoal = () => {
         alert('Please enter a valid goal.'); // Alert if the input is empty
     }
 };
+
 
 // Add event listener to the goal submit button
 document.querySelector('#submitGoal').addEventListener('click', addNewGoal);
